@@ -1,21 +1,28 @@
-"use client"
-import Image from 'next/image'
+import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
-const Feature = ({imgsrc, cardTitle, cardText}) => {
+const About = () => {
   return (
-    <div className='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-      <Link href='#'>
-        <Image className='rounded-t-lg' src={imgsrc} alt={cardTitle}/>
-      </Link>
+    <div className='max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+      <Image
+        className='rounded-t-lg'
+        src='/about.jpg'
+        alt='About'
+      />
+
       <div className='p-5'>
         <Link href='#'>
           <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-            {cardTitle}
+            About DietGPT
           </h5>
         </Link>
         <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-          {cardText}
+          {`
+          DietGPT was inspired by a personal need for quick and healthy meal ideas. As busy professionals with busy schedules, we found it difficult to consistently make nutritious meals for ourselves and our families. We wanted a solution that was convenient, accessible, and tailored to our specific dietary needs and preferences.
+This project was developed as a Portfolio Project for ALX SE Program, as part of our training to become full-stack software engineers. I am proud to have developed a solution that addresses a common problem for many people, and I hope that this chatbot will help others eat healthier and save time in the kitchen.
+
+          `}
         </p>
         <Link
           href='#'
@@ -41,4 +48,4 @@ const Feature = ({imgsrc, cardTitle, cardText}) => {
   );
 }
 
-export default Feature
+export default About

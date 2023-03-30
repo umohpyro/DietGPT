@@ -3,6 +3,8 @@ import Link from 'next/link'
 import LargeHeading from '@/components/ui/LargeHeading'
 import Paragraph from '@/components/ui/Paragraph'
 import Feature from '@/components/Feature'
+import Footer from '@/components/Footer'
+import About from '@/components/About'
 
 import type { Metadata } from 'next'
 
@@ -65,7 +67,7 @@ export default function Home() {
           </div>
           {/*  */}
  {/* Feature Section */}
-<div className='container'>
+<div className=''>
   <ul className ='flex flex-col md:flex-row gap-y-3 md:gap-x-6'>
     {data.map((datum) => (
       <li key={datum.cardTitle}>
@@ -74,7 +76,10 @@ export default function Home() {
     ))}
   </ul>
 </div>
-          {/*  */}
+{/* About Us */}
+<About />
+          {/* Footer */}
+               <Footer />
       </div>
       </div>
  

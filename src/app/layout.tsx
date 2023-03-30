@@ -28,11 +28,12 @@ export default function RootLayout({
           <MobileMenu />
 
           <main>{children}</main>
+      
         </Providers>
-
+ 
         {/* Allow more height for mobile menu on mobile */}
         <div className='h-40 md:hidden' />
-        <Footer />
+      
       </body>
     </html>
   )

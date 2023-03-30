@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "C:\\Users\\Josch\\Desktop\\similarity-api\\.next/types/**/*.ts"
+    "C:\\Users\\Josch\\Desktop\\dietgpt\\.next/types/**/*.ts"
 , "src/components/ChatInterface.jsx"  ],
   "exclude": ["node_modules"]
 }

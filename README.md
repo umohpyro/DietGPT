@@ -68,7 +68,6 @@ pnpm dev
 ```
 
 ## Usage
-<img src="banner.PNG" width="100%"/>
 
 *   Create an account or log in with an existing account
 *   Enter your dietary preferences and restrictions
@@ -91,7 +90,27 @@ git commit -m "Add some feature"
 ```bash 
 git push origin feature/<feature-name>
 ```
-*   Open a pull request`
+*   Open a pull request
+
+## Features
+<img src="banner.PNG" width="100%"/>
+
+- Rate Limited API routes
+- Protection of sensitive routes
+- Google authentication
+- Typescript
+- A complete API key system to create & revoke user keys
+
+- Radix UI Primitives
+- Tailwind CSS
+- Fonts with next/font
+- Icons from Lucide
+- Beautiful dark mode with next-themes
+
+- Class merging with taiwind-merge
+- Animation with tailwindcss-animate
+- Conditional classes with clsx
+- Variants with class-variance-authority
 
 ## Related Projects
 ChatGPT 

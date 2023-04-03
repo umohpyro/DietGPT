@@ -7,6 +7,8 @@ DietGPT - Your friendly pidgin ai diet assistant
 
 An AI project that utilizes the ChatGPT API but fully customized to only respond to health and diet related prompts. DietGPT is a web application that generates personalized diet plans based on user preferences and dietary restrictions. It uses the GPT-3 language model to generate meal plans and recipes that meet the user's needs. The application is built with Next.js, Tailwind CSS, OpenAI, NextAuth and Prisma ORM.
 
+DietGPT was inspired by a personal need for quick and healthy meal ideas. As busy professionals with busy schedules, we found it difficult to consistently make nutritious meals for ourselves and our families. We wanted a solution that was convenient, accessible, and tailored to our specific dietary needs and preferences. This project was developed as a Portfolio Project for ALX SE Program, as part of our training to become full-stack software engineers. I am proud to have developed a solution that addresses a common problem for many people, and I hope that this chatbot will help others eat healthier and save time in the kitchen.
+
 ## Installation
 ### 1. Clone the repository
 ```bash 
@@ -66,6 +68,7 @@ yarn dev
 # or
 pnpm dev
 ```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Usage
 

@@ -6,6 +6,7 @@ import { buttonVariants } from './ui/Button'
 import SignInButton from './ui/SignInButton'
 import SignOutButton from './ui/SignOutButton'
 import LargeHeading from '@/components/ui/LargeHeading'
+import Avatar from './Avatar'
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions)
@@ -40,6 +41,7 @@ const Navbar = async () => {
                 Dashboard
               </Link>
               <SignOutButton />
+              <Avatar imageUrl={session.user.image} />
             </>
           ) : (
             <SignInButton />

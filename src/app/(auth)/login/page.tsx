@@ -26,6 +26,7 @@ const page: FC = () => {
             <Paragraph>Please sign in using your Google account.</Paragraph>
           </div>
           <UserAuthForm />
+          {/* TODO: #2 Add Github and other credentials login here  */}
         </div>
       </div>
     </>

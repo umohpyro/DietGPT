@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { Wave } from 'react-animated-text';
-
+import Avatar from './Avatar';
 import { marked } from 'marked';
 import parse from 'html-react-parser';
 
@@ -144,12 +144,13 @@ export default function ChatInterface({ name, image }) {
                 ) : (
                   <>
                     {/* <div className='text-xl font-bold dark:text-white'>You:</div> */}
-                    <div className='w-[50px] h-[50px] rounded-full overflow-hidden'>
-                      <Image
+                      <div className='w-[50px] h-[50px] rounded-full overflow-hidden'>
+                        <Avatar imageUrl={image} />
+                      {/* <Image
                         src={image}
                         className='w-full h-full object-cover'
                         alt={name}
-                      />
+                      /> */}
                     </div>
                   </>
                 )}

@@ -4,6 +4,7 @@ import { Info, LayoutDashboard, Loader2, User } from 'lucide-react'
 import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useState } from 'react'
+import AvatarMenu from './AvatarMenu'
 import { Button } from './ui/Button'
 import {
   DropdownMenu,
@@ -70,14 +71,19 @@ const MobileMenu = () => {
                   <span>Docs</span>
                 </Link>
               </DropdownMenuItem>
+              {session &&
+                <>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={signUserOut} className='gap-1.5'>
-                <User className='mr-2 h-5 w-5' />
+                  {/* <User className='mr-2 h-5 w-5' /> */}
+                  <AvatarMenu imageUrl={session.user.image} user={session.user.name } />
                 <span>{isLoading ? 'Signing out' : 'Sign out'}</span>
                 {isLoading ? (
                   <Loader2 className='animate-spin h-4 w-4' />
-                ) : null}
+                  ) : null}
               </DropdownMenuItem>
+                  </>
+              }
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>

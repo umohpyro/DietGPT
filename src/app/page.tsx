@@ -60,8 +60,6 @@ export default function Home() {
               className='img-shadow '
               src='/bot.png'
               alt='DietGPT'
-              width={400}
-              height={400}
               />
           </div>
           </div>

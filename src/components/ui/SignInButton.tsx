@@ -34,6 +34,7 @@ const SignInButton: FC<SignInButtonProps> = ({ }) => {
     try {
       setIsLoading(true)
       router.push('/login');
+      setIsLoading(false)
         } catch (error) {
       toast({
         title: 'Error signing in',

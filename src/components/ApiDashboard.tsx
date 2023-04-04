@@ -48,7 +48,7 @@ const ApiDashboard = async ({}) => {
         Chat with DietGPT
       </Paragraph>
 
-      <ChatInterface name={user.user.name} image={user.user.image} />
+      <ChatInterface image={user.user.image} />
     </div>
   )
 }

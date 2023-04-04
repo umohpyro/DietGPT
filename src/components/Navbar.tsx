@@ -41,7 +41,7 @@ const Navbar = async () => {
                 Dashboard
               </Link>
               <SignOutButton />
-              <Avatar imageUrl={session.user.image} />
+              <Avatar imageUrl={session.user.image} width={40} height={40} />
             </>
           ) : (
             <SignInButton />

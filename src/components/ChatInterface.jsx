@@ -6,7 +6,7 @@ import Avatar from './Avatar';
 import { marked } from 'marked';
 import parse from 'html-react-parser';
 
-export default function ChatInterface({ name, image }) {
+export default function ChatInterface({ image }) {
   const messageRef = useRef();
   const chatRef = useRef();
   const buttonRef = useRef();
@@ -144,14 +144,14 @@ export default function ChatInterface({ name, image }) {
                 ) : (
                   <>
                     {/* <div className='text-xl font-bold dark:text-white'>You:</div> */}
-                      <div className='w-[50px] h-[50px] rounded-full overflow-hidden'>
-                        <Avatar imageUrl={image} />
+                      {/* <div className='w-[50px] h-[50px] rounded-full overflow-hidden'> */}
+                        <Avatar imageUrl={image} height={50} width={50}/>
                       {/* <Image
                         src={image}
                         className='w-full h-full object-cover'
                         alt={name}
                       /> */}
-                    </div>
+                    {/* </div> */}
                   </>
                 )}
               </div>

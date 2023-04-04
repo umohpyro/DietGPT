@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
 
 import MobileMenu from '@/components/MobileMenu'
-import Footer from '@/components/Footer'
+//import Footer from '@/components/Footer'
 import Providers from '@/components/Providers'
 import { cn } from '@/lib/utils'
 

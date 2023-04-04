@@ -58,11 +58,11 @@ export default function Home() {
             <Image
               priority
               className='img-shadow '
-              quality={100}
-              style={{ objectFit: 'contain' }}
-              fill
               src='/bot.png'
-              alt='DietGPT' />
+              alt='DietGPT'
+              width={400}
+              height={400}
+              />
           </div>
           </div>
           {/*  */}

@@ -1,12 +1,18 @@
-"use client"
-import Image from 'next/image'
-import Link from 'next/link'
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const Feature = ({imgsrc, cardTitle, cardText}) => {
+const Feature = ({ imgsrc, cardTitle, cardText }) => {
   return (
     <div className='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
       <Link href='#'>
-        <Image className='rounded-t-lg' src={imgsrc} alt={cardTitle}/>
+        <Image
+          className='rounded-t-lg'
+          src={imgsrc}
+          alt={cardTitle}
+          width={400}
+          height={400}
+        />
       </Link>
       <div className='p-5'>
         <Link href='#'>
@@ -30,15 +36,15 @@ const Feature = ({imgsrc, cardTitle, cardText}) => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fill-rule='evenodd'
+              fillRule='evenodd'
               d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-              clip-rule='evenodd'
+              clipRule='evenodd'
             ></path>
           </svg>
         </Link>
       </div>
     </div>
   );
-}
+};
 
-export default Feature
+export default Feature;

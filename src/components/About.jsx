@@ -4,15 +4,16 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <div className='max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-      <Image
-        className='rounded-t-lg'
-        src='/about.jpg'
-        alt='About'
-        width={1024}
-        height={1024}
-      />
-
+    <div className=' bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+      <div className='relative w-full'>
+        <Image
+          className='rounded-t-lg'
+          src='/about.jpg'
+          alt='About'
+          fill
+          style={{ width: '100%' }}
+        />
+      </div>
       <div className='p-5'>
         <Link href='#'>
           <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
@@ -27,7 +28,7 @@ This project was developed as a Portfolio Project for ALX SE Program, as part of
           `}
         </p>
         <Link
-          href='#'
+          href='https://medium.com/@umohpyro/the-pidgin-recipe-assistant-building-a-smart-recipe-suggester-with-chatgpt-api-dd1739eeaf3'
           className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
         >
           Read more

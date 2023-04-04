@@ -15,7 +15,7 @@ const nextConfig = {
    },  */
   // https://nextjs.org/docs/api-reference/next.config.js/images
   images: {
-    domains: ['lh3.googleusercontent.com']
+    domains: ['lh3.googleusercontent.com', 'avatars.githubusercontent.com']
   },
   async headers () {
     return [

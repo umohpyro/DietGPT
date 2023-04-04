@@ -23,10 +23,9 @@ const page: FC = () => {
             </Link>
 
             <LargeHeading>Welcome back!</LargeHeading>
-            <Paragraph>Please sign in using your Google account.</Paragraph>
+            <Paragraph>Please sign in using your Github or Google account.</Paragraph>
           </div>
           <UserAuthForm />
-          {/* TODO: #2 Add Github and other credentials login here  */}
         </div>
       </div>
     </>

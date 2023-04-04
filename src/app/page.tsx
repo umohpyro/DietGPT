@@ -41,7 +41,7 @@ export default function Home() {
           <LargeHeading
             size='lg'
             className='three-d text-black dark:text-light-gold'>
-            DietGPT<br /> Your friendly health<br />/diet assistant.
+            DietGPT<br /> Your friendly health<br />and diet assistant.
           </LargeHeading>
 
           <Paragraph className='max-w-xl lg:text-left'>
@@ -60,6 +60,8 @@ export default function Home() {
               className='img-shadow '
               src='/bot.png'
               alt='DietGPT'
+              fill
+              style={{ width: '100%', height: '100%'  }}    
               />
           </div>
           </div>

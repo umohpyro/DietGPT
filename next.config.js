@@ -1,41 +1,55 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
-  async headers() {
+  /* images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'example.com',
+  //       port: '',
+  //       pathname: '/account123/**',
+  //     },
+  //   ],
+   },  */
+  // https://nextjs.org/docs/api-reference/next.config.js/images
+  images: {
+    domains: ['lh3.googleusercontent.com']
+  },
+  async headers () {
     return [
       {
         source: '/(.*)',
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
+            value: 'SAMEORIGIN'
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            value: '1; mode=block'
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            value: 'nosniff'
           },
           {
             key: 'Referrer-Policy',
-            value: 'same-origin',
+            value: 'same-origin'
           },
           {
             key: 'X-Permitted-Cross-Domain-Policies',
-            value: 'none',
+            value: 'none'
           },
           {
             key: 'X-DNS-Prefetch-Control',
-            value: 'off',
-          },
-        ],
-      },
+            value: 'off'
+          }
+        ]
+      }
     ]
-  },
+  }
 }
 
 module.exports = nextConfig

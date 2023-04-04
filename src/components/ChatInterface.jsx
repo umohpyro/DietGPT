@@ -6,7 +6,7 @@ import { Wave } from 'react-animated-text';
 import { marked } from 'marked';
 import parse from 'html-react-parser';
 
-export default function ChatInterface({name, image}) {
+export default function ChatInterface({ name, image }) {
   const messageRef = useRef();
   const chatRef = useRef();
   const buttonRef = useRef();
@@ -66,7 +66,7 @@ export default function ChatInterface({name, image}) {
       setDisplayMessage(data.response.message.content);
       messageRef.current.value = '';
     } catch (error) {
-    //  console.log(error.message);
+      //  console.log(error.message);
     } finally {
       setLoading(false);
     }
@@ -139,26 +139,16 @@ export default function ChatInterface({name, image}) {
                       src='/bot.png'
                       className='w-full h-full object-cover'
                       alt='DietGPT'
-                      quality={100}
-                      style={{ objectFit: 'contain' }}
-                      fill
-                      width={50}
-                      height={50}
                     />
                   </div>
                 ) : (
                   <>
-                      {/* <div className='text-xl font-bold dark:text-white'>You:</div> */}
+                    {/* <div className='text-xl font-bold dark:text-white'>You:</div> */}
                     <div className='w-[50px] h-[50px] rounded-full overflow-hidden'>
                       <Image
-                      src={image}
-                      className='w-full h-full object-cover'
-                      alt={name}
-                      quality={100}
-                      style={{ objectFit: 'contain' }}
-                      fill
-                      width={50}
-                      height={50}
+                        src={image}
+                        className='w-full h-full object-cover'
+                        alt={name}
                       />
                     </div>
                   </>

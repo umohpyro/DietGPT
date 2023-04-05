@@ -41,17 +41,23 @@ model Session {
   @@index([userId])
 }
 
+enum Role {
+  USER
+  ADMIN
+}
+
 model User {
   id            String    @id @default(cuid())
   name          String?
   email         String?   @unique
   emailVerified DateTime?
-  password     String?
-  apiKey   ApiKey[]
-  apiKeyId String?
-  image    String?
-  accounts Account[]
-  sessions Session[]
+  password      String?
+  apiKey        ApiKey[]
+  apiKeyId      String?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  role          Role @default(USER)
 }
 
 model ApiKey {

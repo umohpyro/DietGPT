@@ -1,5 +1,5 @@
 //import LoginPage from '@/components/customLogin/Login'
-import { Form } from '@/components/customLogin/form'
+import { RegisterForm } from '@/components/customRegister/form';
 import Icons from '@/components/Icons'
 import { buttonVariants } from '@/components/ui/Button'
 import LargeHeading from '@/components/ui/LargeHeading'
@@ -24,10 +24,10 @@ const page: FC = () => {
               Back to home
             </Link>
 
-            <LargeHeading>Welcome back!</LargeHeading>
-            {/* <Paragraph>Please sign in using your Email & Password.</Paragraph> */}
-            <Form />
-            {/* <Paragraph>or</Paragraph> */}
+            <LargeHeading>Register</LargeHeading>
+            {/* <Paragraph>Register using your Email & Password.</Paragraph> */}
+            <RegisterForm />
+            {/* <Paragraph>or register using your Github or Google account.</Paragraph> */}
           </div>
           <UserAuthForm />
         </div>

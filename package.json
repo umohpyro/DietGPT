@@ -17,6 +17,7 @@
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.11.0",
     "@radix-ui/react-dropdown-menu": "^2.0.3",
+    "@radix-ui/react-label": "^2.0.1",
     "@radix-ui/react-scroll-area": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.2",
     "@total-typescript/ts-reset": "^0.3.7",

@@ -45,7 +45,9 @@ export const RegisterForm = () => {
 	return (
 		<form onSubmit={onSubmit} className='space-y-2 w-full sm:w-[400px]'>
 			<div className='grid w-full items-center gap-1.5'>
-				<Label htmlFor='email'>Email</Label>
+				<Label htmlFor='email' className='dark:text-slate-200'>
+					Email
+				</Label>
 				<Input
 					className='w-full'
 					required
@@ -56,7 +58,9 @@ export const RegisterForm = () => {
 				/>
 			</div>
 			<div className='grid w-full items-center gap-1.5'>
-				<Label htmlFor='password'>Password</Label>
+				<Label htmlFor='password' className='dark:text-slate-200'>
+					Password
+				</Label>
 				<Input
 					className='w-full'
 					required
@@ -74,11 +78,10 @@ export const RegisterForm = () => {
 			</div>
 			<p className='text-center text-sm dark:text-slate-200'>
 				Need to login with your email and password?{' '}
-				<Link
-					className='text-indigo-500 hover:underline'
-					href='/login'>
-					Sign In 
-				</Link>{' '}or Login below{' '}
+				<Link className='text-indigo-500 hover:underline' href='/login'>
+					Sign In
+				</Link>{' '}
+				or Login below{' '}
 			</p>
 		</form>
 	);

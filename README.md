@@ -1,127 +1,115 @@
-# Project Name
-DietGPT - Your friendly pidgin ai diet assistant
+# DietGPT
 
-<img src="dietGPT-landing.PNG" width="100%"/>
+**Your friendly diet assistant wey dey talk Pidgin.** 🇳🇬
 
-## Introduction
+Ask DietGPT about food, nutrition or meal plans and it answers in Nigerian Pidgin English, with recipes laid out step by step.
 
-An AI project that utilizes the ChatGPT API but fully customized to only respond to health and diet related prompts. DietGPT is a web application that generates personalized diet plans based on user preferences and dietary restrictions. It uses the GPT-3 language model to generate meal plans and recipes that meet the user's needs. The application is built with Next.js, Tailwind CSS, OpenAI, NextAuth and Prisma ORM.
+<img src="banner.PNG" width="100%" alt="DietGPT: your friendly pidgin diet assistant"/>
 
-DietGPT was inspired by a personal need for quick and healthy meal ideas. As busy professionals with busy schedules, we found it difficult to consistently make nutritious meals for ourselves and our families. We wanted a solution that was convenient, accessible, and tailored to our specific dietary needs and preferences. This project was developed as a Portfolio Project for ALX SE Program, as part of our training to become full-stack software engineers. I am proud to have developed a solution that addresses a common problem for many people, and I hope that this chatbot will help others eat healthier and save time in the kitchen.
+If DietGPT helps you, please give the repo a ⭐. It helps other people find it.
 
-## Installation
-### 1. Clone the repository
-```bash 
+## Features
+
+- **Pidgin diet chat.** Answers only diet and health questions, in Pidgin English, using OpenAI `gpt-3.5-turbo`.
+- **Recipes and meal plans.** Recipes come back as *Recipe Name*, *Ingredients* and *Instructions*.
+- **Safety reminder.** The assistant is told to remind users to see a health professional.
+- **Flexible sign-in.** Google, GitHub, or email and password, powered by NextAuth.js.
+- **API keys.** Each user can create and revoke a key, see their request history, and call the key-protected `/api/v1/similarity` endpoint (text similarity with OpenAI embeddings).
+- **Rate limiting.** API routes allow 50 requests per hour per IP address, backed by Upstash Redis.
+- **Dark mode.** Built in with `next-themes`.
+
+## Screenshot
+
+<img src="dietGPT-landing.PNG" width="100%" alt="DietGPT landing page"/>
+
+## How it works
+
+1. Sign in with Google, GitHub, or email and password.
+2. On your dashboard, create an API key. The chat opens once you have one.
+3. Ask something like *"Give me a cheap meal plan for this week"* and DietGPT go answer you for Pidgin.
+
+## Tech stack
+
+| Layer | Tools |
+|---|---|
+| Framework | Next.js 13 (App Router), React 18, TypeScript |
+| UI | Tailwind CSS, Radix UI, Lucide icons |
+| AI | OpenAI API (`gpt-3.5-turbo`, `text-embedding-ada-002`) |
+| Auth | NextAuth.js with the Prisma adapter |
+| Database | PostgreSQL with Prisma ORM |
+| Rate limiting | Upstash Redis |
+
+## Run it locally
+
+### What you need
+
+- Node.js 18
+- A PostgreSQL database
+- An OpenAI API key
+- An Upstash Redis database
+- A Google OAuth client and a GitHub OAuth app
+
+### 1. Clone and install
+
+```bash
 git clone https://github.com/umohpyro/DietGPT.git
-```
-
-### 2. Navigate to the project directory
-```bash 
 cd DietGPT
-``` 
-
-### 3. Install dependencies
-```bash 
 npm install
 ```
 
-### 4. Create a copy of the .env.local file in the root directory and fill the configuration variables:
+### 2. Set your environment variables
+
 ```bash
-# ------------------------
-# NextAuth.js Configuration
-# ------------------------
-
-NEXTAUTH_SECRET=secret
-NEXTAUTH_URL=http://localhost:3000
-
-# ------------------------
-# OAuth Providers
-# ------------------------
-
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-
-# ------------------------
-# Database
-# ------------------------
-
-DATABASE_URL=
-
-# ------------------------
-# OpenAI
-# ------------------------
-OPENAI_API_KEY=
-
-# ------------------------
-# Redis
-# ------------------------
-REDIS_URL=
-REDIS_SECRET=
+cp .env.example .env
 ```
 
+Fill in `.env`. Every value is required:
 
-### 5. Start the development server
+| Variable | What to put there |
+|---|---|
+| `NEXTAUTH_SECRET` | Any long random string, e.g. from `openssl rand -base64 32` |
+| `NEXTAUTH_URL` | `http://localhost:3000` |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | Your Google OAuth client |
+| `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` | Your GitHub OAuth app |
+| `DATABASE_URL` | Your PostgreSQL connection string |
+| `OPENAI_API_KEY` | Your OpenAI API key |
+| `REDIS_URL`, `REDIS_SECRET` | Your Upstash Redis REST URL and REST token |
+
+If the Google or GitHub values are empty, sign-in and the dashboard fail with a `Missing ..._CLIENT_ID` error.
+
+`.env` is already in `.gitignore`, so your secrets stay out of git.
+
+### 3. Create the database tables
+
+```bash
+npx prisma db push
+```
+
+### 4. Start the app
+
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Usage
-
-*   Create an account or log in with an existing account
-*   Enter your dietary preferences and restrictions
-*   Click the button
-*   View your personalized diet plan and recipes
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Contributing
-Contributions are welcome! To contribute, follow these steps:
 
-*   Fork the repository
-*   Create a new branch 
-```bash 
-git checkout -b feature/<feature-name>
-```
-*   Commit your changes 
-```bash 
-git commit -m "Add some feature"
-```
-*   Push to the branch 
-```bash 
-git push origin feature/<feature-name>
-```
-*   Open a pull request
+Contributions are welcome.
 
-## Features
-<img src="banner.PNG" width="100%"/>
+1. Fork the repo.
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Commit your changes and push the branch.
+4. Open a pull request.
 
-- Rate Limited API routes
-- Protection of sensitive routes
-- Google authentication
-- Typescript
-- A complete API key system to create & revoke user keys
+Found a bug or have an idea? [Open an issue](https://github.com/umohpyro/DietGPT/issues).
 
-- Radix UI Primitives
-- Tailwind CSS
-- Fonts with next/font
-- Icons from Lucide
-- Beautiful dark mode with next-themes
+## About
 
-- Class merging with taiwind-merge
-- Animation with tailwindcss-animate
-- Conditional classes with clsx
-- Variants with class-variance-authority
+DietGPT was built by [Umoh Andem](https://github.com/umohpyro) as a portfolio project for the ALX Software Engineering programme. It started from a simple need: quick, healthy meal ideas for busy people, in a language that feels like home.
 
-## Related Projects
-ChatGPT 
-
-## Feedback
-
-If you have any feedback, please reach out to me at andemumoh@gmail.com
+Feedback is welcome at andemumoh@gmail.com.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
